@@ -12,7 +12,7 @@
     "build:cjs": "tsc --target es5 --outDir build/cjs --module commonjs",
     "build:esm": "tsc --target es5 --outDir build/esm --module esnext",
     "prepare": "npm run build:cjs",
-    "postinstall": "npm install && npm run build:esm"
+    "postinstall": "npm run build:esm"
   },
   "keywords": [
     "react-native",
