@@ -9,8 +9,8 @@
   "scripts": {
     "clean": "rm -rf build && rm -rf node_modules && npm install",
     "build": "npm run build:cjs && npm run build:esm",
-    "build:cjs": "tsc --outDir build/cjs --module commonjs",
-    "build:esm": "tsc --outDir build/esm --module esnext",
+    "build:cjs": "tsc --build --outDir build/cjs",
+    "build:esm": "tsc --build --outDir build/esm",
     "prepare": "npm run build"
   },
   "keywords": [
