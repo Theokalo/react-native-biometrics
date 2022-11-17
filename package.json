@@ -8,10 +8,10 @@
   "types": "build/esm/index.d.ts",
   "scripts": {
     "clean": "rm -rf build && rm -rf node_modules && npm install",
-    "build": "yarn run build:cjs && yarn run build:esm",
+    "build": "npm run build:cjs && npm run build:esm",
     "build:cjs": "tsc --target es5 --outDir build/cjs --module commonjs",
     "build:esm": "tsc --target es5 --outDir build/esm --module esnext",
-    "postinstall": "yarn && yarn run build"
+    "postinstall": "npm install && npm run build"
   },
   "keywords": [
     "react-native",
