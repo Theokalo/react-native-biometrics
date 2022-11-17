@@ -8,10 +8,10 @@
   "types": "build/esm/index.d.ts",
   "scripts": {
     "clean": "rm -rf build && rm -rf node_modules && npm install",
-    "build": "npm run build:cjs && npm run build:esm",
+    "build": "npm-run-all --parallel build:cjs build:esm",
     "build:cjs": "tsc --target es5 --outDir build/cjs --module commonjs",
     "build:esm": "tsc --target es5 --outDir build/esm --module esnext",
-    "prepare": "npm run build:cjs && npm run build:esm"
+    "prepare": "npm run build"
   },
   "keywords": [
     "react-native",
