@@ -11,7 +11,7 @@
     "build": "npm run build:cjs && npm run build:esm",
     "build:cjs": "tsc --target es5 --outDir build/cjs --module commonjs",
     "build:esm": "tsc --target es5 --outDir build/esm --module esnext",
-    "prepare": "npm install typescript@3.7.2 --save-dev && npm run build"
+    "release": "npm run clean && npm run build && npm publish"
   },
   "keywords": [
     "react-native",
@@ -41,5 +41,8 @@
   },
   "bugs": {
     "url": "https://github.com/SelfLender/react-native-biometrics/issues"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.2"
   }
 }
