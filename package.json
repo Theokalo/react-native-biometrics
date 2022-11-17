@@ -8,7 +8,7 @@
   "types": "build/esm/index.d.ts",
   "scripts": {
     "clean": "rm -rf build && rm -rf node_modules && npm install",
-    "build": "npm-run-all --parallel build:cjs build:esm",
+    "build": "npm run build:cjs && npm run build:esm",
     "build:cjs": "tsc --target es5 --outDir build/cjs --module commonjs",
     "build:esm": "tsc --target es5 --outDir build/esm --module esnext",
     "postinstall": "npm run build"
